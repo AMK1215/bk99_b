@@ -9,6 +9,10 @@ body{
 .cursor-pointer{
   cursor: pointer;
 }
+.promoImg{
+  height: 280px;
+  width: 100%;
+}
 p{
   margin: 0;
   padding: 0;
@@ -56,6 +60,77 @@ input{
  .exchangeBank{
   width: 80px;
   height: 80px;
+ }
+ .contactCard{
+  background: #2A2F3F;
+ }
+ .contactImg{
+  width: 50px;
+  height: 50px;
+ }
+ .btn2{
+  background: #F7DD69;
+ }
+.w-full{
+  width: 100%;
+}
+.w-max{
+  width: max-content;
+}
+.authLogo{
+  width: 150px;
+  height: 150px;
+}
+hr{
+  color: white;
+ }
+.text-wrap{
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+}
+ .auth{
+  width: 35%;
+  margin: auto;
+ }
+ .bankText p{
+  font-size: 16px;
+  word-wrap: break-word;
+ }
+ @media screen and (max-width:900px) {
+  .promoImg{
+    height: 240px;
+    width: 100%;
+  }
+ }
+ @media screen and (max-width:700px) {
+  .promoImg{
+    height: 200px;
+    width: 100%;
+  }
+ }
+ @media screen and (max-width:650px) {
+  .bankText{
+    font-size: 14px;
+  }
+ }
+ @media screen and (max-width:620px) {
+  .contactImg{
+    width: 35px;
+    height: 35px;
+   }
+ }
+ 
+ @media screen and (max-width:500px) {
+  .promoImg{
+    height: 180px;
+    width: 100%;
+  }
+ }
+ @media screen and (max-width:400px) {
+  .promoImg{
+    height: 140px;
+    width: 100%;
+  }
  }
  @media screen and (max-width:390px) {
   .exchangeBank{

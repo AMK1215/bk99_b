@@ -1,7 +1,6 @@
 import React from 'react'
 import { GrPrevious } from 'react-icons/gr'
-import AccountInfo from '../components/AccountInfo'
-import CurrentBalance from '../components/CurrentBalance'
+ import CurrentBalance from '../components/CurrentBalance'
 import kpay from '../assets/img/kpay.png'
 import wave from '../assets/img/wave.png'
 import cb from '../assets/img/cb.png'
@@ -26,8 +25,7 @@ const ExchangeBank = () => {
             <h5 className=' text-center fw-bold'>Exchange</h5>
         </div>
       </div>
-      <AccountInfo/>
-      <CurrentBalance/>
+       <CurrentBalance/>
       <h5 className="fw-bold my-3">Choose Payment Method</h5>
       <div className="d-flex gap-3 gap-sm-5 align-items-center my-2">
         {banks.map((bank)=>{

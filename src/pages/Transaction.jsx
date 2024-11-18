@@ -11,25 +11,25 @@ const TransactionPage = () => {
     const handleShow = () => setShow(true);
   
     const data=[
-        {status:'Transaction Out',
+        {status:'With Draw',
             id:'123456890',
             amount:10000,
             closing:4000,
             time:new Date().toLocaleString()
         },
-        {status:'Transaction In',
+        {status:'Deposit',
         id:'123456890',
         amount:10000,
         closing:4000,
         time:new Date().toLocaleString()
     },
-    {status:'Transaction Out',
+    {status:'With Draw',
     id:'123456890',
     amount:10000,
     closing:4000,
     time:new Date().toLocaleString()
 },
-{status:'Transaction In',
+{status:'Deposit',
 id:'123456890',
 amount:10000,
 closing:4000,
@@ -43,23 +43,20 @@ time:new Date().toLocaleString()
         {name:'Previous Month',value:'previousMonth'},
         {name:'This Year',value:'thisYear'},
     ]
-    const times=[
-        {name:'15 Sep 2023',value:''},
-        {name:'20 Sep 2023',value:''},
-     ]
+    
      const statuses=[
-        {name:'Transaction In',value:''},
-        {name:'Transaction Out',value:''},
+        {name:'Deposit',value:''},
+        {name:'With Draw',value:''},
      ]
   return (
     <div className='py-2  pb-5 transaction'>
      <div className="mb-2 pe-2 d-flex align-items-center justify-content-between"> 
-     <div className=" d-flex align-items-center gap-2 gap-sm-5" >
+     <div className="px-2 px-sm-4 d-flex align-items-center gap-2 gap-sm-5" >
         <div onClick={()=>history.back()} >
             <GrPrevious color='#fff' size={20} />
         </div>
         <div className=' mx-auto'>
-            <h5 className=' text-center fw-bold'>Transaction</h5>
+            <h5 className=' text-center fw-bold mt-2'>Transfer Logs</h5>
         </div>
       </div>
       <img onClick={handleShow} src={filter} style={{width:'20px',height:'20px'}} />
@@ -68,10 +65,10 @@ time:new Date().toLocaleString()
        <p className='fw-bold'>This Week</p>
        <div className="my-2 ">
         {data.map((item,index)=>{
-            return <div key={index} className={` ${item.status==='Transaction In' ? 'transactionIn' : 'transactionOut'} rounded-3 bg-white text-black mb-2 row py-2  px-sm-2  shadow-lg `}>
+            return <div key={index} className={` ${item.status==='Deposit' ? 'transactionIn' : 'transactionOut'} rounded-3 bg-white text-black mb-2 row py-2  px-sm-2  shadow-lg `}>
                 <div className="col-6">
                     <small className="d-block fw-bold text-black">{item.status}</small>
-                    <small className='d-block'>Transaction ID</small>
+                    <small className='d-block'>Transfer ID</small>
                     <small className='d-block'>{item.id}</small>
                 </div>
                 <div className="col-6">
@@ -98,16 +95,7 @@ time:new Date().toLocaleString()
                     </button>
                 })}
             </div>
-            <p className='fw-bold mb-2 mt-4'>Select Period</p>
-            <div className="d-flex align-items-center gap-2 gap-sm-4 flex-wrap">
-                {times.map((item,index)=>{
-                    return <button className='bg-white py-2 px-3 rounded-4 border' key={index}>
-                        <img src={calendar} style={{width:'18px',height:'18px'}} />                        
-                         <p className='d-inline ms-1 transactionFilterText'>{item.name}</p>
-
-                    </button>
-                })}
-            </div>
+             
             <p className='fw-bold mb-2 mt-4'>Status</p>
             <div className="d-flex align-items-center gap-2 gap-sm-4 flex-wrap">
                 {statuses.map((item,index)=>{

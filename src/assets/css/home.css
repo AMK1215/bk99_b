@@ -14,16 +14,14 @@
     font-size: 28px;
 }
 .bannerImg{
-    height: 200px;
+   width: 100%;
+    height: 280px;
     object-fit: cover;
 }
 .homeTabs::-webkit-scrollbar{
     display: none;
 }
-.homeTabs img{
-    width: 25px;
-    height: 25px;
-}
+ 
 .activeHomeTab{
     border-bottom:3px solid #59637c;
 }
@@ -50,20 +48,14 @@
     background: #2A2F3F;
  }
  .socialIcon{
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
  }
  .sponsorImg{
     height: 40px;
     width: auto;
  }
- .accountInfo{
-    background: #757f9a;
- }
- .accountInfoProfile{
-    width: 35px;
-    height: 35px;
- }
+ 
  .footerNav{
     border-top: 2px solid #2a2f3f ;
     z-index: 99;
@@ -100,7 +92,103 @@
     height: 18px;
     object-fit: cover;
   }
+  .flag{
+   width: 38px;
+   height:38px;
+ }
+ .homeMarquee{
+   display: flex;
+   align-items: center;
+   border-radius: 8px;
+      transform: skew(-20deg);  
+      background: rgba(249, 248, 248, 0.5);
+ }
+  .langDropdown{
+   background: none !important;
+   min-width: 80px !important;
+   max-width: 80px !important;
+   transform: none !important;
+   padding: 0px !important;
+   margin-top: 10px !important ;
+   border: none !important;
+   }
+ .langDropdown .dropdown-item{
+   background: none !important;
+ width: 80px;
+ }
+ .profileIcon{
+   width: 30px;
+   height: 30px;
+   object-fit: contain;
+ }
+ .marqueeText{
+   transform:  skew(20deg) ;
+   font-size: 16px;
+}
+.logo{
+   width: 80px;
+   height: 80px;
+}
+.navUser{
+   width: 50px;
+   height: 50px;
+}
+.navCoin{
+   width: 28px;
+   height: 28px;
+}
+.navReload{
+   width: 25px;
+   height: 25px;
+}
+.providerBtn{
+   border: 0 solid rgba(240, 241, 255, .35);
+   border-radius: 2px;
+   color: #fafafa;
+    border: 0 solid rgba(240, 241, 255, .35);
+    background: linear-gradient(180deg, #c3c3c3 17%, #6f6f6f 96%);
+    box-shadow: -1px 1px 9px -3px #000000b0;
+}
+.gameListStart{
+   border-top-left-radius: 25px;
+   border-bottom-left-radius: 25px;
+}
+.gameListEnd{
+   border-top-right-radius: 25px;
+   border-bottom-right-radius: 25px;
+}
+.activeGameList{
+   background: linear-gradient(180deg, #d60303 17%, #700101 96%);
+}
+.typeIcon{
+   width: 35px !important;
+   height: 35px !important ;
+}
+.typeName{
+   font-size:14px;
+}
+@media screen and (max-width:800px) {
+   .bannerImg{
+      height: 250px;
+   }
+   .marqueeText{
+      font-size: 15px;
+   }
+}
+@media screen and (max-width:650px) {
+   .bannerImg{
+      height: 230px;
+   }
+}
+@media screen and (max-width:600px) {
+   .bannerImg{
+      height: 200px;
+   }
+}
  @media screen and (max-width:500px) {
+   .gameProvider{
+      font-size: 13px;
+   }
         .navAmountBtn{
             font-size: 13px;
         }
@@ -115,7 +203,40 @@
         }
        
  }
-
+ @media screen and (max-width:450px) {
+   
+   .homeMarquee{
+       font-size: 14px;
+   }
+}
+@media screen and (max-width:400px){
+   .socialIcon{
+      width: 50px;
+      height: 50px;
+   }
+   .bannerImg{
+      height: 150px;
+  }
+  .marqueeText{
+   font-size: 14px;
+  }
+  .navUser{
+   width: 45px;
+   height:45px;
+}
+.navCoin{
+   width: 25px;
+   height: 25px;
+}
+.navReload{
+   width: 22px;
+   height: 22px;
+}
+.logo{
+   width: 75px;
+   height:75px;
+}
+}
  @media screen and (max-width:340px) {
     .bannerImg{
         height: 140px;

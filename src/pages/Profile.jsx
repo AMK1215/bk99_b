@@ -5,21 +5,23 @@ import user from '../assets/img/user.png'
 import { BiEdit } from 'react-icons/bi'
 import information from '../assets/img/information.png'
 import language from '../assets/img/language.png'
-import report from '../assets/img/report.png'
-import contact from '../assets/img/contact.png'
+ import contact from '../assets/img/contact.png'
 import { Link } from 'react-router-dom'
 import { Modal } from 'react-bootstrap'
 import en from '../assets/img/en.png'
 import mm from '../assets/img/mm.png'
+import report from '../assets/img/report.png'
+import password from '../assets/img/password.png'
+import bank from '../assets/img/bank.png'
+import log from '../assets/img/log.svg'
 
 const ProfilePage = () => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-    const links=[
+  const links=[
         {img:information,name:'Edit profile information',link:'/edit-profile'},
-        {img:report,name:'Win Loss Report',link:'/report'},
+        {img:password,name:'Change Password',link:'/change-password'},
+        {img:bank,name:'My Banks',link:'/bank'},
+        {img:report,name:'Transfer Logs',link:'/transfer-logs'},
+        {img:log,name:'Game Logs',link:'/game-logs'},
         {img:contact,name:'Contact us',link:'/contact'},
     ]
   return (
@@ -48,37 +50,14 @@ const ProfilePage = () => {
         {links.map((item,index)=>{
             return <div key={index} className='mb-3'>
                 <Link to={item.link} className='d-flex gap-1 align-items-center'>
-                <img src={item.img} />
+                <img src={item.img} className='profileIcon' />
                 <p>{item.name}</p>
                 </Link>
             </div>
         })}
-         <div onClick={handleShow}  className='mb-3'>
-                <div className='d-flex gap-1 align-items-center'>
-                <img src={language} />
-                <p>Language</p>
-                </div>
-      </div>
-      </div>
-      <Modal  className="text-black" show={show} onHide={handleClose}>
-        <Modal.Header closeButton className='py-2 my-0'>
-          <Modal.Title>
-            <h5  style={{fontSize:'19px'}}  className='fw-bold mt-3 mb-0 '>Choose Your Preferred Language</h5>
-            <small style={{fontSize:'15px'}} >Please select your Language</small>
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <button className="mb-2 mb-sm-4 bg-white border rounded-4 py-3 text-center" style={{width:'100%'}}>
-            <img src={en} style={{width:'25px',height:'20px',objectFit:'cover'}} /> English
-          </button>
-          <button className=" bg-white border rounded-4 py-3 text-center" style={{width:'100%'}}>
-          <img src={mm} style={{width:'25px',height:'20px',objectFit:'cover'}} /> Myanmar
-          </button>
-        </Modal.Body>
-        <Modal.Footer>
           
-        </Modal.Footer>
-      </Modal>
+      </div>
+       
     </div>
   )
 }

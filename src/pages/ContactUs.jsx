@@ -5,7 +5,20 @@ import titok from '../assets/img/titok.png'
 import fb from '../assets/img/fb.png'
 import ig from '../assets/img/ig.png'
 import { Link } from 'react-router-dom'
+import viber from '../assets/img/viber.png'
+ import tele from '../assets/img/tele.png'
+import fb2 from '../assets/img/fb2.png'
+import toast from 'react-hot-toast'
 const ContactUsPage = () => {
+  const contact=[
+    {img:viber,text:'+96912345689',link:'viber.com'},
+    {img:tele,text:'t.me/burma368',link:'telegram.org'},
+    {img:fb2,text:'www.facebook.com/123',link:'facebook.com'},
+]
+const copyLink=(link)=>{
+  navigator.clipboard.writeText(link)
+  toast.success('Link Copied!')
+}
     const socials=[
         {img:twitter,link:'/'},
         {img:titok,link:'/'},
@@ -13,25 +26,42 @@ const ContactUsPage = () => {
         {img:ig,link:'/'}
     ]
   return (
-    <div className='p-2 pb-5'>
+    <div className='p-2 py-3 py-sm-5'>
        <div className="mb-2 d-flex align-items-center gap-2 gap-sm-5" >
         <div onClick={()=>history.back()} >
             <GrPrevious color='#fff' size={20} />
         </div>
-        <div className=' mt-3 mx-auto'>
-            <h5 className=' text-center fw-bold'>Contact Us</h5>
+        <div className='mt-3 mx-auto'>
+            <h4 className='text-center text-white fw-semibold'>Contact Information</h4>
         </div>
        
       </div>
-      <div style={{background:'#ecedee'}} className='text-black p-3 p-sm-4 rounded-3'>
-        <h5>Visit Us</h5>
-        <p>12 Marina Boulevard, DBS Asia Central, Marina Bay Financial Centre Tower 3, Singapore 018982</p>
-        <h5 className='mt-3'>Email Us</h5>
-        <p>test@sdax.com</p>
-        <h5 className='mt-3'>Call Us</h5>
-        <p>+971-4-576-6770 , +971-55-983-7007</p>
-        <p className="mt-3">Feel free to get in touch with us through our channels:</p>
-        <div className="mt-3 d-flex align-items-center  gap-3">
+      <div   className='text-black p-3 p-sm-4 rounded-3'>
+     <div className="row">
+     {contact.map((item,index)=>{
+            return <div key={index} className="col-sm-6 col-lg-4 px-2 px-lg-4  mb-3 py-2"  >
+              <div  className='text-white rounded-4  contactCard py-2 '  >
+                <div  className="d-flex align-items-center px-3 gap-4" >
+                    <div className="">
+                    <img src={item.img} className='contactImg mx-auto ' />
+                    </div>
+                    <div className=" mb-2">
+                    <p className='mt-2'>{item.text}</p>
+             <button onClick={()=>copyLink(item.link)} className=' bg-info text-white fw-semibold rounded-5 px-3 mt-2'>Copy</button>
+             </div>
+              </div>
+             </div>
+            </div>
+        })}
+     </div>
+     <div className="w-full mt-5 ">
+        <div className="row">
+        <hr  className='col-4 mt-2'/>
+        <h4 className="col-4 text-center text-white fw-semibold">Social Medias</h4>
+        <hr  className='col-4 mt-2' />
+        </div>
+     </div>
+        <div className="mt-3 d-flex align-items-center justify-content-center  gap-3">
             {socials.map((social,index)=>{
                 return <Link key={index} to={social.link}>
                     <img className='socialIcon' src={social.img}  />
