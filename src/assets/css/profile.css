@@ -1,0 +1,23 @@
+.profile .userImg{
+    width: 100px;
+    height: 100px;
+ }
+ .profileContainer{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+ .profileEditContainer{
+    position: absolute;
+    bottom: -10px;
+     right: -10px;
+    background: #fff;
+    color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }

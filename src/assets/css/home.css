@@ -1,0 +1,127 @@
+.loginBtn{
+     background: linear-gradient(90deg, #586892 0%, #9ab2ba 100%);
+   color: #F8EDE4;
+ }
+ .navAmountBtn{
+    background: #a1adf5;
+ }
+ .navAmountBtn img{
+    width: 25px;
+    height: 25px;
+
+ }
+ .searchIcon{
+    font-size: 28px;
+}
+.bannerImg{
+    height: 200px;
+    object-fit: cover;
+}
+.homeTabs::-webkit-scrollbar{
+    display: none;
+}
+.homeTabs img{
+    width: 25px;
+    height: 25px;
+}
+.activeHomeTab{
+    border-bottom:3px solid #59637c;
+}
+.searchContainer{
+    overflow: hidden;
+    background: #535E71;
+
+}
+.searchContainer input{
+    background: #535E71;
+    color: #fff;
+}
+.searchContainer input::placeholder{
+    color: #fff;
+ }
+ .gameImg{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 3px solid #c1c0bf;
+ }
+ .footer{
+    background: #2A2F3F;
+ }
+ .socialIcon{
+    width: 30px;
+    height: 30px;
+ }
+ .sponsorImg{
+    height: 40px;
+    width: auto;
+ }
+ .accountInfo{
+    background: #757f9a;
+ }
+ .accountInfoProfile{
+    width: 35px;
+    height: 35px;
+ }
+ .footerNav{
+    border-top: 2px solid #2a2f3f ;
+    z-index: 99;
+    background: #2a2f3f;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+ }
+ .loginModalHeader{
+    background: #36343A;
+    color: #ddd;
+ }
+ .loginModalBody{
+    background: #232226;
+ }
+ .loginTitle{
+    width: 100%;
+    text-align: center;
+  }
+  .loginInputContainer{
+    border: 1px solid #fff;
+    border-radius: 8px;
+  }
+  .navLoginBtn{
+    width: 100%;
+    background: #757F9A;
+    color: #fff;
+    border-radius: 4px;
+     
+  }
+  .footerNavImg{
+    width: 20px;
+    height: 18px;
+    object-fit: cover;
+  }
+ @media screen and (max-width:500px) {
+        .navAmountBtn{
+            font-size: 13px;
+        }
+        .loginBtn{
+            font-size: 14px;
+        }
+        .searchIcon{
+            font-size: 22px;
+        }
+        .bannerImg{
+            height: 180px;
+        }
+       
+ }
+
+ @media screen and (max-width:340px) {
+    .bannerImg{
+        height: 140px;
+    }
+    .sponsorImg{
+        height: 35px;
+      }
+      
+ }
