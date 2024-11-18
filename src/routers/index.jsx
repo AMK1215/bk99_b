@@ -9,7 +9,13 @@ import TransactionPage from "../pages/Transaction";
 import ProfilePage from "../pages/Profile";
 import EditProfilePage from "../pages/EditProfile";
 import ContactUsPage from "../pages/ContactUs";
-import Report from "../pages/Report";
+ import Promotion from "../pages/Promotion";
+import ChangePassword from "../pages/ChangePassword";
+import GameLogsPage from "../pages/GameLogs";
+import BankPage from "../pages/BankPage";
+import AddBankPage from "../pages/AddBankPage";
+import LoginPage from "../pages/LoginPage";
+import RegisterPage from "../pages/RegisterPage";
  
 const router= createBrowserRouter([
     {
@@ -19,6 +25,10 @@ const router= createBrowserRouter([
             {
                 index:true,
                 element:<HomePage/>
+            },
+            {
+                path:'/promotion',
+                element:<Promotion/>
             },
             {
                 path:'/exchange',
@@ -33,12 +43,23 @@ const router= createBrowserRouter([
                 element:<TopUpPage/>
             },
             {
+            path:'/bank',
+            element:<BankPage/>
+             }, {
+            path:'/add-bank',
+            element:<AddBankPage/>
+             },
+            {
                 path:'/with-draw',
                 element:<WithDrawPage/>
             },
             {
-                path:'/transaction',
+                path:'/transfer-logs',
                 element:<TransactionPage/>
+            },
+            {
+                path:'/game-logs',
+                element:<GameLogsPage/>
             },
             {
                 path:'/profile',
@@ -49,13 +70,21 @@ const router= createBrowserRouter([
                 element:<EditProfilePage/>
             },
             {
+                path:'/change-password',
+                element:<ChangePassword/>
+            },
+            {
                 path:'/contact',
                 element:<ContactUsPage/>
             },
             {
-                path:'/report',
-                element:<Report/>
-            }
+                path:'/login',
+                element:<LoginPage/>
+            },
+            {
+                path:'/register',
+                element:<RegisterPage/>
+            },
         ]
     }
 ])

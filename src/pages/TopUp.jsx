@@ -21,7 +21,7 @@ const TopUpPage = () => {
             <GrPrevious color='#fff' size={20} />
         </div>
         <div className=' mt-3 mx-auto'>
-            <h5 className=' text-center fw-bold'>Top Up</h5>
+            <h5 className=' text-center fw-bold'>Deposit</h5>
         </div>
        
       </div>
@@ -59,7 +59,7 @@ const TopUpPage = () => {
         <Form.Control as="textarea" placeholder='Write here...' rows={3} />
       </Form.Group>
       </Form>
-      <button  className="py-2 shadow-lg  navLoginBtn">Top Up</button>
+      <button  className="py-2 shadow-lg  navLoginBtn">Deposit</button>
 
     </div>
   )

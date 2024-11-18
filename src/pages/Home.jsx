@@ -1,19 +1,25 @@
 import React from 'react'
-import Carousel from '../components/Carousel'
-import HomeTabs from '../components/HomeTabs'
+ import HomeTabs from '../components/HomeTabs'
 import SearchInput from '../components/SearchInput'
-import AccountInfo from '../components/AccountInfo'
-import Footer from '../components/Footer'
+ import Footer from '../components/Footer'
+import LanguageDropdown from '../components/LanguageDropdown'
+import Marquee from '../components/Marquee'
+import Banner from '../components/Banner'
+import AdsBanner from '../components/AdsBanner'
 
 const HomePage = () => {
-  return (
-    <div className='p-2 p-sm-3'>
-      <AccountInfo/>
-      <Carousel/>
+  return (<>
+    <div className="d-flex align-items-center">
+      <AdsBanner/>
+        <Marquee  />
+        <LanguageDropdown/>
+      </div>
+    <div className='px-2 pt-0 pb-2 px-sm-3 pb-sm-3'>
+      <Banner/>
       <HomeTabs/>
-      <Footer/>
-
-     </div>
+       </div>
+       <Footer/>
+     </>
   )
 }
 

@@ -3,8 +3,7 @@ import filter from '../assets/img/filter.png'
 import '../assets/css/transaction.css'
 import { GrPrevious } from 'react-icons/gr'
 import { Offcanvas } from 'react-bootstrap'
-import calendar from '../assets/img/calendar.png'
-const Report = () => {
+ const GameLogs = () => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -36,10 +35,7 @@ const Report = () => {
         {name:'Previous Month',value:'previousMonth'},
         {name:'This Year',value:'thisYear'},
     ]
-    const times=[
-        {name:'15 Sep 2023',value:''},
-        {name:'20 Sep 2023',value:''},
-     ]
+    
      const statuses=[
         {name:'Win',value:''},
         {name:'Loss',value:''},
@@ -47,12 +43,12 @@ const Report = () => {
   return (
     <div className='py-2  pb-5 transaction'>
      <div className="mb-2 pe-2 d-flex align-items-center justify-content-between"> 
-     <div className=" d-flex align-items-center gap-2 gap-sm-5" >
+     <div className="px-2 px-sm-4 d-flex align-items-center gap-2 gap-sm-5" >
         <div onClick={()=>history.back()} >
             <GrPrevious color='#fff' size={20} />
         </div>
         <div className=' mx-auto'>
-            <h5 className=' text-center fw-bold'>Win Loss Report</h5>
+            <h5 className='mt-2 text-center fw-bold'>Game Logs</h5>
         </div>
       </div>
       <img onClick={handleShow} src={filter} style={{width:'20px',height:'20px'}} />
@@ -94,16 +90,7 @@ const Report = () => {
                     </button>
                 })}
             </div>
-            <p className='fw-bold mb-2 mt-4'>Select Period</p>
-            <div className="d-flex align-items-center gap-2 gap-sm-4 flex-wrap">
-                {times.map((item,index)=>{
-                    return <button className='bg-white py-2 px-3 rounded-4 border' key={index}>
-                        <img src={calendar} style={{width:'18px',height:'18px'}} />                        
-                         <p className='d-inline ms-1 transactionFilterText'>{item.name}</p>
-
-                    </button>
-                })}
-            </div>
+            
             <p className='fw-bold mb-2 mt-4'>Status</p>
             <div className="d-flex align-items-center gap-2 gap-sm-4 flex-wrap">
                 {statuses.map((item,index)=>{
@@ -122,4 +109,4 @@ const Report = () => {
   )
 }
 
-export default Report
+export default GameLogs

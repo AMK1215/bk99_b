@@ -1,11 +1,27 @@
 import React from 'react'
+import coin from '../assets/img/coin.png'
+import user from '../assets/img/user.png'
+import reload from '../assets/img/reload.svg'
+
 
 const CurrentBalance = () => {
   return (
-    <div style={{background:'#646c77'}} className="cursor-pointer py-3 px-3 d-flex align-items-center justify-content-between rounded-3">
-       <small> Current Balance</small>
-       <div className='d-flex align-items-center gap-1'><h5>86,450</h5> <h6 className='mt-1'> MMK</h6></div>
-       </div>
+    <>
+    <div className='rounded-4 p-3 exchangeContainer d-flex align-items-center gap-1'>
+    <img src={user} className='exchangeUser'  />
+    <div>
+         <p className="fw-semibold ms-2 exchangeText">user@123</p>
+          <div className="d-flex align-items-center gap-1">
+            <img src={coin} className='exchangeCoin' />
+            <small className="fw-semibold exchangeText">10000 Ks</small>
+            <img src={reload} className='exchangeReload' />
+          </div>
+        </div>
+      <div>
+         
+      </div>
+      </div>
+    </>
   )
 }
 
